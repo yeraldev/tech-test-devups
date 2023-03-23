@@ -1,5 +1,6 @@
 <template>
   <Section>
+    <Toast :message="message" v-if="show" />
     <Subtitle text="Contáctanos" />
     <div class="form">
       <div class="form-fields">
@@ -19,6 +20,8 @@
 <script lang="ts" setup>
 import { IField, ISubscription } from "~~/utils/models";
 
+const message = ref("");
+const show = ref(false);
 const subs: ISubscription = {
   email: "",
   firstname: "",
@@ -42,7 +45,21 @@ const handleValues = (key: string, value: string | number) => {
   subs[key] = value;
 };
 
+const showMsg = () => {
+  show.value = true;
+  setTimeout(() => {
+    show.value = false;
+    message.value = "";
+  }, 3000);
+};
+
 const handleSubmit = () => {
+  message.value = validateForm(subs);
+  if (message.value !== "") {
+    showMsg();
+    alert(message.value);
+    return;
+  }
   setSubscription(subs);
 };
 </script>
