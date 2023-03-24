@@ -2,6 +2,10 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Live Demo
+
+Visit [Landing Page](https://tech-test-devups.vercel.app/) and enjoy!
+
 ## Setup
 
 Make sure to install the dependencies:
