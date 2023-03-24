@@ -1,8 +1,10 @@
 import { ISubscription } from "./models";
 
+export const isSomeEmpty = (form: ISubscription): boolean => {
+  return Object.values(form).some((v: string) => v === "");
+};
+
 export const validateForm = (form: ISubscription): string => {
-  const someEmpty = Object.values(form).some((v: string) => v === "");
-  if (someEmpty) return "Debe completar todos los campos";
   const { email, firstname, lastname, phone } = form;
   if (firstname.length < 3)
     return "El Nombre debe tener una longitud mayor a 3 caracteres";

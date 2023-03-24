@@ -12,7 +12,7 @@
         />
       </div>
       <div class="form-btn">
-        <Button :disabled="false" @click="handleSubmit" />
+        <Button :disabled="isFormEmpty" @click="handleSubmit" />
       </div>
     </div>
   </Section>
@@ -22,6 +22,7 @@ import { IField, ISubscription } from "~~/utils/models";
 
 const message = ref("");
 const show = ref(false);
+const isFormEmpty = ref(true);
 const subs: ISubscription = {
   email: "",
   firstname: "",
@@ -43,6 +44,7 @@ const fields: IField[] = [
 
 const handleValues = (key: string, value: string | number) => {
   subs[key] = value;
+  isFormEmpty.value = isSomeEmpty(subs);
 };
 
 const showMsg = () => {
