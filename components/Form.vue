@@ -19,7 +19,7 @@
 </template>
 <script lang="ts" setup>
 import { IField, ISubscription } from "~~/utils/models";
-
+const { $awn } = useNuxtApp();
 const message = ref("");
 const show = ref(false);
 const isFormEmpty = ref(true);
@@ -59,7 +59,7 @@ const handleSubmit = () => {
   message.value = validateForm(subs);
   if (message.value !== "") {
     showMsg();
-    alert(message.value);
+    $awn.warning(message.value);
     return;
   }
   setSubscription(subs);

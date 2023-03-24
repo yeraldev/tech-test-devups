@@ -8,8 +8,5 @@ export default defineNuxtConfig({
       },
     ],
   },
-  css: ["@/public/css/main.css"],
-  publicRuntimeConfig: {
-    // API_URL: NUXT_API_URL,
-  },
+  css: ["@/public/css/main.css", "awesome-notifications/dist/style.css"],
 });
