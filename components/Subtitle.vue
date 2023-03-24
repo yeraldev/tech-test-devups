@@ -1,6 +1,10 @@
 <template>
   <div class="subtitle-wrapper">
-    <h2 class="subtitle-text pf">{{ text }}</h2>
+    <h2 class="subtitle-text pf">
+      <em>
+        {{ text }}
+      </em>
+    </h2>
   </div>
 </template>
 
@@ -18,16 +22,16 @@ defineProps<{ text: string }>();
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
+  font-size: 500;
   text-align: center;
   z-index: 1;
 }
 .subtitle-text::after {
   content: "";
   position: absolute;
-  bottom: -1.5rem;
-  left: 0;
-  height: 120%;
-  width: 130%;
+  bottom: -70%;
+  height: 100%;
+  width: 100%;
   background-image: url("/assets/brush.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -40,17 +44,6 @@ defineProps<{ text: string }>();
   }
   .subtitle-text {
     font-size: 2.5rem;
-  }
-  .subtitle-text::after {
-    bottom: -2.5rem;
-  }
-}
-@media (min-width: 900px) {
-  .subtitle-text {
-    font-size: 3.5rem;
-  }
-  .subtitle-text::after {
-    bottom: -4rem;
   }
 }
 </style>

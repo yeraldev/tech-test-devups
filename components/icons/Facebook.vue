@@ -1,6 +1,7 @@
 <template>
   <div class="s-icon">
     <svg
+      class="svg"
       width="14"
       height="26"
       viewBox="0 0 14 26"

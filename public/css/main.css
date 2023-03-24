@@ -26,12 +26,27 @@ img {
 
 .s-icon {
   display: grid;
-  place-content: center;
-  width: 3rem;
-  height: 3rem;
-  border: solid 5px;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: solid 1px;
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
+}
+
+.svg {
+  height: 50%;
+}
+
+.svg-y {
+  width: 60%;
+}
+
+@media (min-width: 600px) {
+  .s-icon {
+    width: 3rem;
+    height: 3rem;
+  }
 }

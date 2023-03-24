@@ -89,13 +89,13 @@ if (typeof window !== "undefined") {
 .main-categories-wrapper {
   display: block;
   height: fit-content;
-  width: 12.5rem;
+  width: 16rem;
   overflow: hidden;
   margin: 0 auto;
   padding: 0.5rem 1rem;
 }
 .main-categories {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1rem;
   font-weight: 500;
@@ -164,6 +164,7 @@ if (typeof window !== "undefined") {
 }
 .dropped--active {
   position: relative;
+  display: flex;
   opacity: 1;
   max-height: 100vh;
 }

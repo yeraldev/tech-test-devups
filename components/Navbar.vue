@@ -1,14 +1,14 @@
 <template>
   <nav class="nav">
-    <!-- <span class="nav-logo pf">Logo</span> -->
+    <em class="nav-logo pf">Logo</em>
     <ul class="nav-icons">
-      <li class="nav-icon">
+      <li>
         <IconsFacebook />
       </li>
-      <li class="nav-icon">
+      <li>
         <IconsInstagram />
       </li>
-      <li class="nav-icon">
+      <li>
         <IconsYoutube />
       </li>
     </ul>
@@ -17,21 +17,28 @@
 
 <style scoped>
 .nav {
-  position: fixed;
+  position: absolute;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   width: 100%;
   padding: 1.5rem;
+  top: 0;
+  left: 0;
   z-index: 2;
 }
 .nav-logo {
   font-weight: 700;
   font-size: 2rem;
-  margin-left: 1rem;
 }
 .nav-icons {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .nav-logo {
+    font-size: 3rem;
+    margin-left: 2.5rem;
+  }
 }
 </style>
