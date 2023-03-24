@@ -147,7 +147,7 @@ if (typeof window !== "undefined") {
   .main-categories-wrapper {
     width: 25rem;
     margin: 0 0 0 5rem;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 7.5rem;
   }
   .main-category-icon {
