@@ -84,7 +84,7 @@ if (typeof window !== "undefined") {
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 .main-categories-wrapper {
   display: block;
@@ -92,13 +92,14 @@ if (typeof window !== "undefined") {
   width: 16rem;
   overflow: hidden;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
 }
 .main-categories {
   display: none;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   font-weight: 500;
+  font-size: 0.75rem;
   width: 100%;
   padding-top: 0.5rem;
 }
@@ -144,8 +145,10 @@ if (typeof window !== "undefined") {
     flex-direction: row;
   }
   .main-categories-wrapper {
-    width: 20rem;
+    width: 25rem;
     margin: 0 0 0 5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 7.5rem;
   }
   .main-category-icon {
     transform: rotate(0);
